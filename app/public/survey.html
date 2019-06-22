@@ -1,0 +1,244 @@
+<!-- Survey page for app -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <title>Friend Finder</title>
+</head>
+
+<body>
+    <h1>Survey Questions</h1>
+    <hr>
+    <h2>About You</h2>
+    <!-- form start -->
+    <form>
+        <div class="form-group">
+            <!-- this will hold the name property for each new friend object -->
+            <label for="exampleFormControlInput1">Name (Required)</label>
+            <input type="text" class="form-control" id="name" placeholder="John Johnson">
+        </div>
+        <div class="form-group">
+            <!-- this will hold the photo property for each new friend object -->
+            <label for="exampleFormControlInput1">Link To Photo Image (Required)</label>
+            <input type="text" class="form-control" id="photo">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matcheModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="matchModalLabel">Best Match</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- match name and photo will apear in the modal pop up when user submits form -->
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- the below ten questions will be used to post the user scores in the friend objects -->
+        <div class="form-group">
+            <h2>Question 1</h2>
+            <label for="exampleFormControlSelect1">You love video games.</label>
+            <select class="form-control" id="Q1">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 2</h2>
+            <label for="exampleFormControlSelect1">You love to code.</label>
+            <select class="form-control" id="Q2">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 3</h2>
+            <label for="exampleFormControlSelect1">You prefer winter over summer.</label>
+            <select class="form-control" id="Q3">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 4</h2>
+            <label for="exampleFormControlSelect1">You like to try new things.</label>
+            <select class="form-control" id="Q4">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 5</h2>
+            <label for="exampleFormControlSelect1">You like to meet new people.</label>
+            <select class="form-control" id="Q5">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 6</h2>
+            <label for="exampleFormControlSelect1">You are an open-minded individual.</label>
+            <select class="form-control" id="Q6">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 7</h2>
+            <label for="exampleFormControlSelect1">Generally speaking, you rely more on your experience than your
+                imagination.</label>
+            <select class="form-control" id="Q7">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 8</h2>
+            <label for="exampleFormControlSelect1">People can rarely upset you.</label>
+            <select class="form-control" id="Q8">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 9</h2>
+            <label for="exampleFormControlSelect1">You are a generous person.</label>
+            <select class="form-control" id="Q9">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <h2>Question 10</h2>
+            <label for="exampleFormControlSelect1">You love answering a bunch of random questions on a dating
+                app.</label>
+            <select class="form-control" id="Q10">
+                <option></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- button to submit data and return match via a modal -->
+        <button class="btn btn-primary submit" type="submit" class="btn btn-primary" data-toggle="modal"
+            data-target="#matchModal">Submit form</button>
+    </form>
+
+    <hr>
+    <!-- footer which contains links to the api and the github repo for this project -->
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Benk0033/FriendFinder">GitHub
+                    Repo</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- links to the popper and boostrap js cdns so that the modal will work -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script>
+
+    // click event to post data from form to api and return a match
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+        // grab the form elements
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [$("#Q1").val(),
+            $("#Q2").val(),
+            $("#Q3").val(),
+            $("#Q4").val(),
+            $("#Q5").val(),
+            $("#Q6").val(),
+            $("#Q7").val(),
+            $("#Q8").val(),
+            $("#Q9").val(),
+            $("#Q10").val()]
+        };
+
+        // post newFriend object to api and then get match data back based on the logic from the apiRoutes file
+        $.post("/api/friends", newFriend)
+            .then(function (data) {
+
+                $("#matchModal").modal()
+
+                // display match name and photo in the modal
+                $(".modal-body").html(data.name + "<br><img src=" + data.photo + ">")
+
+            });
+
+    });
+
+</script>
